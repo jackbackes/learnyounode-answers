@@ -1,4 +1,7 @@
 //Customer Errors with Colors!
+//format:
+//customErr(['this is blue! ','blue'],['this is red!','red'])
+// => this is blue! this is red! (with appropriate colors, printed to stderr)
 //by John Backes (github.com/thejohnbackes)
 
 'use strict';
@@ -8,13 +11,6 @@ const cursor = ansi(process.stderr);
 const util = require('util');
 
 module.exports = customErr;
-
-//customErr([message, [color]])
-//customErr([message, [color]], format)
-
-//customErr receives an array of messages, in the format: 
-//Array.of(['message', 'color']...)
-//arguments = ['message', 'color']...
 
 function customErr(){
 	let format = null;
@@ -38,10 +34,6 @@ function customErr(){
 
 // module tests
 
-/*function testCustomErr() {
-	eval(customErr(arguments));
-}
-*/
 /*
 let obj = {
 	stuff: 'and stuff',
